@@ -66,4 +66,19 @@ Consume recursos de la Api de [TheMovieDB.org](https://api.themoviedb.org)
 | RetrofitInstance | Proporciona la instancia de retrofit |
 
 
+### Principio de responsabilidad única:
+
+Es uno de los cinco principios básicos de la programación orientada a objetos, SOLID: "Cada objeto en el sistema deben tener una simple responsabilidad, y todos los servicios de los objetos deben cumplir con esa simple responsabilidad"
+Es decir, una clase debería tener una única razón para cambiar. Gracias a ello, el código creado será más sencillo de leer, testear y mantener.
+
+### Caracteristicas de un codigo limpio:
+
+* Que permita la realizacion de test rapidos y repetibles, con repuestas true or false para definir claramente el error y tambien independiente, con el fin de evitar que cause efecto cascada cuando ocurra alguna falla y asi facilitar su analisis. Ademas idealmente deben ser escritos antes que el codigo de producción.
+* Que contenga comentarios solo en caso de ser necesarios para evitar el exceso y la confusión que conlleva
+* Evitar codigo repetido, es decir, dos o mas partes del programa que realicen la misma función
+* Crear funciones/metodos lo mas breves posible
+* Limpiar el codigo, eliminar el codigo en desuso, corregir errores y duplicados
+* Los nombres de las variables, funciones, metodos o clases deben ser claros y precisos. Debe tener relación con su funcion
+* Debe regir el principio "Open Closed": "una clase debe estar abierta a extensiones pero cerrada a modificaciones" para evitar efectos colaterales a la hora de necesitar extender el comportamiento de una clase.
+
 
