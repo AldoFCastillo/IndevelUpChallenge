@@ -62,11 +62,11 @@ public class MovieRecyclerAdapter extends RecyclerView.Adapter<MovieRecyclerAdap
 
     public class MovieViewHolder extends RecyclerView.ViewHolder {
         @BindView(R.id.imageViewPosterCell)
-        ImageView imageViewTrailerCelda;
+        ImageView imageViewPosterCell;
         @BindView(R.id.textViewTitleCell)
-        TextView textViewNombreCelda;
-        @BindView(R.id.textViewValorationCell)
-        TextView textViewPuntajeCelda;
+        TextView textViewTitleCell;
+        @BindView(R.id.textViewVoteCell)
+        TextView textViewVoteCell;
         @BindView(R.id.progressBarCell)
         ProgressBar progressBarCell;
 
@@ -90,7 +90,7 @@ public class MovieRecyclerAdapter extends RecyclerView.Adapter<MovieRecyclerAdap
                     @Override
                     public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
                         progressBarCell.setVisibility(View.GONE);
-                        imageViewTrailerCelda.setImageResource(R.drawable.ic_cine);
+                        imageViewPosterCell.setImageResource(R.drawable.ic_cine);
                         return false;
                     }
 
@@ -99,12 +99,14 @@ public class MovieRecyclerAdapter extends RecyclerView.Adapter<MovieRecyclerAdap
                         progressBarCell.setVisibility(View.GONE);
                         return false;
                     }
-                }).into(imageViewTrailerCelda);
+                }).into(imageViewPosterCell);
             } else {
                 progressBarCell.setVisibility(View.GONE);
-                imageViewTrailerCelda.setImageResource(R.drawable.ic_cine);
+                imageViewPosterCell.setImageResource(R.drawable.ic_cine);
             }
-            textViewNombreCelda.setText(movie.getTitle());
+            textViewTitleCell.setText(movie.getTitle());
+            textViewVoteCell.setText(movie.getVoteAverage());
+
         }
 
 
